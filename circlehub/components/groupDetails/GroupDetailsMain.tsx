@@ -19,7 +19,7 @@ const GroupDetailsMain = ({curUser, groupId}:{curUser:RequestProps, groupId:Numb
 
   const getGroupDetails = async () => {
     try {
-      await axios.post("https://hotgirlcom3103.herokuapp.com/getGroupDetails", {groupId}).then((response) => {
+      await axios.post("http://www.vmcugroupsapi.com/getGroupDetails", {groupId}).then((response) => {
         if (response.statusText == "OK") {
           setGroupDetails(response.data);
         }

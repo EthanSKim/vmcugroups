@@ -25,7 +25,7 @@ const LoginMain = () => {
             alert("please select");
         } else {
             try {
-                await axios.post("https://hotgirlcom3103.herokuapp.com/login", userData).then((response) => {
+                await axios.post("http://www.vmcugroupsapi.com/login", userData).then((response) => {
                  if (response.statusText == "OK") {
                     localStorage.setItem(userKey, JSON.stringify(response.data));
                     router.push("/");

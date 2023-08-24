@@ -35,7 +35,7 @@ const GroupCreateForm = () => {
       alert("please select");
     } else {
       try {
-        await axios.post("https://hotgirlcom3103.herokuapp.com/createGroup", {name, type}).then(
+        await axios.post("http://www.vmcugroupsapi.com/createGroup", {name, type}).then(
           (response) => {
             if (response.statusText == "OK") {
               console.log(response.data);

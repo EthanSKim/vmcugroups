@@ -18,7 +18,7 @@ const MyGroupTab = ({curUser, tab, admin}: {curUser:RequestProps, tab:String, ad
   const [groups, setGroups] = useState(initialState);
   const getJoinedGroups = async () => {
     try {
-      await axios.post("https://hotgirlcom3103.herokuapp.com/getJoinedGroups", {id:curUser.id}).then((response) => {
+      await axios.post("http://www.vmcugroupsapi.com/getJoinedGroups", {id:curUser.id}).then((response) => {
         if (response.statusText == "OK") {
           setGroups(response.data);
         }

@@ -10,7 +10,7 @@ const PublicTab = ({tab, admin}:{tab:String, admin:boolean}) => {
 
   const getAllGroups = async () => {
     try {
-      await axios.get("https://hotgirlcom3103.herokuapp.com/getAllGroups").then((response) => {
+      await axios.get("http://www.vmcugroupsapi.com/getAllGroups").then((response) => {
         if (response.statusText == "OK") {
           setGroups(response.data);
         }

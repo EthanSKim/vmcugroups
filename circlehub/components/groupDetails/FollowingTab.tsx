@@ -19,7 +19,7 @@ const FollowingTab = ({groupId}:{groupId:String}) => {
       const userDataStr = localStorage.getItem(userKey);
       if (userDataStr) {
         const userId = JSON.parse(userDataStr).id;
-        await axios.post("https://hotgirlcom3103.herokuapp.com/getSubGroupMembersInfo", {userId, groupId}).then((response) => {
+        await axios.post("http://www.vmcugroupsapi.com/getSubGroupMembersInfo", {userId, groupId}).then((response) => {
           setSubGroupMembers(response.data);
         })
       }
