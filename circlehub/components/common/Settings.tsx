@@ -35,7 +35,7 @@ const Settings = ({ curUser }: { curUser: RequestProps }) => {
       alert("please select");
     } else {
       try {
-        await axios.post("http://localhost:8800/changeInfo", userData).then((response) => {
+        await axios.post("https://hotgirlcom3103.herokuapp.com/changeInfo", userData).then((response) => {
           if (response.statusText == "OK") {
             localStorage.setItem(userKey, JSON.stringify(response.data));
             router.push("/");

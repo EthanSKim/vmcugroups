@@ -26,7 +26,7 @@ const GroupCard = ({ data, tab, admin }: { data: GroupProps, tab:String, admin:b
       if (userDataStr) {
         router.push(`/groups/${id}`);
         const userId = JSON.parse(userDataStr).id;
-        await axios.post("http://localhost:8800/joinGroup", {userId, id});
+        await axios.post("https://hotgirlcom3103.herokuapp.com/joinGroup", {userId, id});
       }
     } catch (err:any) {
       if(err.response.status == 400) {
@@ -44,7 +44,7 @@ const GroupCard = ({ data, tab, admin }: { data: GroupProps, tab:String, admin:b
         const leave = confirm("Are you sure you want to leave?");
         if (leave) {
           const userId = JSON.parse(userDataStr).id;
-          await axios.post("http://localhost:8800/leaveGroup", {userId, id});
+          await axios.post("https://hotgirlcom3103.herokuapp.com/leaveGroup", {userId, id});
         }
       }
     } catch (err) {
@@ -54,7 +54,7 @@ const GroupCard = ({ data, tab, admin }: { data: GroupProps, tab:String, admin:b
 
   const handleLock = async () => {
     try {
-      await axios.post("http://localhost:8800/lockGroup", {id});
+      await axios.post("https://hotgirlcom3103.herokuapp.com/lockGroup", {id});
     } catch (err) {
       console.log(err);
     }
@@ -62,7 +62,7 @@ const GroupCard = ({ data, tab, admin }: { data: GroupProps, tab:String, admin:b
 
   const handleUnlock = async () => {
     try {
-      await axios.post("http://localhost:8800/unlockGroup", {id});
+      await axios.post("https://hotgirlcom3103.herokuapp.com/unlockGroup", {id});
     } catch(err) {
       console.log(err);
     }
