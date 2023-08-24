@@ -52,7 +52,7 @@ const BioContent = () => {
       <div className="head-area text-start">
         <h6>Today's Event</h6>
         <p className="mdtxt mt-6">
-          Please enjoy our first Friday Gathering!
+          “Please enjoy our first Friday Gathering!”.
         </p>
       </div>
       {/* <ul className="d-grid gap-3 mt-4">
