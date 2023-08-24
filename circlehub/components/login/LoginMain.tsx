@@ -42,7 +42,7 @@ const LoginMain = () => {
         <main className="container main-content">
             <div className="single-box text-start p-sm-5 p-3">
                 <div className="head-area mb-6">
-                    <h6>Register is not required</h6>
+                    <h6>Howdy! Please Register</h6>
                 </div>
                 <form onSubmit={handleSubmit} className="text-center d-grid gap-4">
                     <div className="row">

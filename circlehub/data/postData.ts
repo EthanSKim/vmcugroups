@@ -19,7 +19,7 @@ const postData = [
   // },
   {
     id: 1,
-    postText: "Welcome to Vision Mission Church Undergrads!!\nSunday Service: 11:00 AM\nFriday Gathering: 7:00 PM\nLocation:college station.",
+    postText: "Welcome to Vision Mission Church Undergrads!!\nSunday Service: 11:00 AM\nFriday Gathering: 7:00 PM\nLocation:4254 Texas 6 Frontage Rd, College Station, Texas 77845",
     hashTags: ["Love", "God", "Share"],
     imgs: [post_img_1],
     authorName: "VMC Undergrads",
@@ -29,13 +29,13 @@ const postData = [
         id: 1,
         commentText:
           "I love our church",
-        authorName: "Soohwan Kim",
+        authorName: "Church Member",
         authorAvt: avatar_2,
         replies: [
           {
             id: 1,
-            replyText: "Me too hehe",
-            authorName: "New Developer",
+            replyText: "So excited to have you here!",
+            authorName: "Church Leader",
             authorAvt: avatar_3,
           },
         ],

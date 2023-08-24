@@ -50,10 +50,9 @@ const BioContent = () => {
   return (
     <div className="single-box p-3 p-sm-5">
       <div className="head-area text-start">
-        <h6>오늘의 나눔</h6>
+        <h6>Today's Event</h6>
         <p className="mdtxt mt-6">
-          “Lorem ipsum dolor sit amet consectetur. Nec donec vestibulum eleifend
-          lectus ipsum ultrices et dictum”.
+          Please enjoy our first Friday Gathering!
         </p>
       </div>
       {/* <ul className="d-grid gap-3 mt-4">
