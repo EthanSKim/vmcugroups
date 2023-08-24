@@ -5,7 +5,7 @@ const ConnectionsMain = () => {
   return (
     <>
       {/* Connections */}
-      <Connections clss="col-xxl-9 col-xl-8" />
+      {/* <Connections clss="col-xxl-9 col-xl-8" /> */}
 
       <div className="col-xxl-3 col-xl-4 col-lg-8 mt-5 mt-xl-0">
         <div className="cus-scrollbar">

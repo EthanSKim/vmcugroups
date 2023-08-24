@@ -37,7 +37,7 @@ const GroupAdminAssistMain = () => {
                   <h6>Post</h6>
                   <div className="input-area py-2">
                     {/* select */}
-                    <Select data={filterDate} />
+                    {/* <Select data={filterDate} /> */}
                   </div>
                 </div>
                 {/* BarChart */}
@@ -50,7 +50,7 @@ const GroupAdminAssistMain = () => {
                   <h6>Member Request</h6>
                   <div className="input-area py-2">
                     {/* select */}
-                    <Select data={filterDate2} />
+                    {/* <Select data={filterDate2} /> */}
                   </div>
                 </div>
                 {/* <div id="memberRequest"></div> */}

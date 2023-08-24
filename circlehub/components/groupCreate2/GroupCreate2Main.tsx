@@ -20,10 +20,10 @@ const GroupCreate2Main = () => {
           </div>
           <div className="col-xl-9 col-lg-8">
             {/* Group Details Middle */}
-            <GroupDetailsMiddle>
+            {/* <GroupDetailsMiddle> */}
               {/* Group Create Head */}
               <GroupCreateHead />
-            </GroupDetailsMiddle>
+            {/* </GroupDetailsMiddle> */}
           </div>
         </div>
       </div>

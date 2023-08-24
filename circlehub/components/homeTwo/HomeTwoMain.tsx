@@ -12,7 +12,7 @@ const HomeTwoMain = () => {
           <div className="row justify-content-between">
             <div className="col-xxl-3 col-xl-3 col-lg-4 col-6 cus-z2">
               {/* Home Left */}
-              <HomeLeft />
+              {/* <HomeLeft /> */}
             </div>
             <div className="col-xxl-5 col-xl-6 col-lg-8 d-flex flex-column gap-7 mt-0 mt-lg-12 mt-xl-0">
               {/* Story Slider */}
@@ -22,7 +22,7 @@ const HomeTwoMain = () => {
               <MakePost />
 
               {/* Feeds */}
-              <NewsFeeds clss="p-3 p-sm-5" />
+              {/* <NewsFeeds clss="p-3 p-sm-5" /> */}
             </div>
             <div className="col-xxl-3 col-xl-3 col-lg-4 col-6 mt-5 mt-xl-0">
               <div className="cus-scrollbar cus-overflow sidebar-head">

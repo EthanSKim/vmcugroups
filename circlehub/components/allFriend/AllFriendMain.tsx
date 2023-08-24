@@ -6,10 +6,10 @@ const AllFriendMain = () => {
     <main className="main-content">
       <div className="container">
         <div className="row">
-          <div className="col-xl-3 col-lg-4">
-            {/* Friend Left Menu */}
+          {/* <div className="col-xl-3 col-lg-4">
+            Friend Left Menu
             <FriendLeftMenu />
-          </div>
+          </div> */}
           <div className="col-xl-9 col-lg-8">
             {/* Frients */}
             <Friends />

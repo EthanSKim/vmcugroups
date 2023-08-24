@@ -7,7 +7,7 @@ const PagesSettingMain = () => {
         <h5>Settings</h5>
       </div>
       {/* Settings */}
-      <Settings />
+      {/* <Settings /> */}
     </div>
   );
 };

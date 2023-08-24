@@ -13,7 +13,7 @@ const ProfileGropsMain = () => {
               className="col-xxl-4 col-xl-6 col-lg-4 col-sm-6 col-8"
             >
               {/* Group Card  */}
-              <GroupCard data={itm} />
+              {/* <GroupCard data={itm} /> */}
             </div>
           ))}
         </div>

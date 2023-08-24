@@ -41,7 +41,7 @@ const GroupPostMain = () => {
               </div>
               <div className="input-area py-2">
                 {/* Select */}
-                <Select data={selectData} />
+                {/* <Select data={selectData} /> */}
               </div>
             </form>
             <div className="row ms-0 ms-lg-10">

@@ -33,7 +33,7 @@ const PageDetailsMain = () => {
           <div className="row">
             <div className="col-xl-3 col-lg-4">
               {/* Home Left */}
-              <HomeLeft clss="d-lg-none" />
+              {/* <HomeLeft clss="d-lg-none" /> */}
             </div>
             <div className="col-xl-9 col-lg-8">
               <div className="banner-area pages-create mb-5">
@@ -132,7 +132,7 @@ const PageDetailsMain = () => {
                   <div className="row">
                     <div className="col-xxl-8 col-xl-8 col-lg-12 d-flex flex-column gap-7">
                       {/* News Feeds */}
-                      <NewsFeeds clss="p-3 p-sm-5" />
+                      {/* <NewsFeeds clss="p-3 p-sm-5" /> */}
                     </div>
                     <div className="col-xxl-4 col-xl-4 col-lg-10 mt-5 mt-xl-0">
                       <div className="cus-scrollbar">
@@ -198,7 +198,7 @@ const PageDetailsMain = () => {
                 >
                   <div className="row">
                     {/* Connections */}
-                    <Connections />
+                    {/* <Connections /> */}
 
                     <div className="col-xxl-4 col-xl-5 col-lg-10 mt-5 mt-xl-0">
                       <div className="cus-scrollbar">

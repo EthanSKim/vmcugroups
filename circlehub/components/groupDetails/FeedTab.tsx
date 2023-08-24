@@ -10,7 +10,7 @@ const FeedTab = () => {
         {/* <MakePost /> */}
 
         {/* News Feeds */}
-        <NewsFeeds clss="p-3 p-sm-5" />
+        {/* <NewsFeeds clss="p-3 p-sm-5" /> */}
       </div>
       <div className="col-xxl-4 col-xl-4 col-lg-10 mt-5 mt-xl-0">
         {/* About */}

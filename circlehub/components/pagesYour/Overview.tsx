@@ -51,7 +51,7 @@ const Overview = () => {
         <h5>Overview</h5>
         <div className="input-area py-2">
           {/* Select */}
-          <Select data={filterDate} />
+          {/* <Select data={filterDate} /> */}
         </div>
       </div>
       <div className="single-box d-grid gap-4 p-5">

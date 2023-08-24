@@ -38,10 +38,10 @@ const PrivacyTable = () => {
                 <p className="m-0">Group Follower</p>
               </th>
               <td>
-                <div className="input-area w-100 py-2">
-                  {/* Select */}
+                {/* <div className="input-area w-100 py-2">
+                  Select
                   <Select data={followerPrivacy} />
-                </div>
+                </div> */}
               </td>
             </tr>
             <tr>
@@ -49,10 +49,10 @@ const PrivacyTable = () => {
                 <p className="m-0">Group Member</p>
               </th>
               <td>
-                <div className="input-area w-100 py-2">
-                  {/* Select */}
+                {/* <div className="input-area w-100 py-2">
+                  Select
                   <Select data={memberPrivacy} />
-                </div>
+                </div> */}
               </td>
             </tr>
             <tr>
@@ -62,7 +62,7 @@ const PrivacyTable = () => {
               <td>
                 <div className="input-area w-100 py-2">
                   {/* Select */}
-                  <Select data={postPrivacy} />
+                  {/* <Select data={postPrivacy} /> */}
                 </div>
               </td>
             </tr>
@@ -73,7 +73,7 @@ const PrivacyTable = () => {
               <td>
                 <div className="input-area w-100 py-2">
                   {/* Select */}
-                  <Select data={requestPrivacy} />
+                  {/* <Select data={requestPrivacy} /> */}
                 </div>
               </td>
             </tr>

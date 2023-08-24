@@ -113,7 +113,7 @@ const ActivityModal = () => {
                   <div className="footer-area d-flex justify-content-between pt-5">
                     <div className="left-area">
                       {/* Select */}
-                      <Select data={privacySelect} />
+                      {/* <Select data={privacySelect} /> */}
                     </div>
                     <div className="btn-area d-flex justify-content-end gap-2">
                       <button

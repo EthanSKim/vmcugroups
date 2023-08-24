@@ -41,7 +41,7 @@ const PagesDashboardMain = () => {
           <h5>Overview</h5>
           <div className="input-area py-2">
             {/* Select */}
-            <Select data={filterDate} />
+            {/* <Select data={filterDate} /> */}
           </div>
         </div>
         <div className="cus-border pt-6 my-6">

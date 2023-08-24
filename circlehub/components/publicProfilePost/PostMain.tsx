@@ -12,7 +12,7 @@ const PostMain = () => {
       </div>
       <div className="col-xxl-6 col-xl-5 col-lg-8 mt-0 mt-lg-10 mt-xl-0 d-flex flex-column gap-7 cus-z">
         {/* News Feeds */}
-        <NewsFeeds clss="p-3 p-sm-5" />
+        {/* <NewsFeeds clss="p-3 p-sm-5" /> */}
       </div>
       <div className="col-xxl-3 col-xl-4 col-lg-4 col-6 mt-5 mt-xl-0">
         <div className="cus-overflow cus-scrollbar sidebar-head">

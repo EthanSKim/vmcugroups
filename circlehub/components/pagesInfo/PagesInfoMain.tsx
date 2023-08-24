@@ -24,7 +24,7 @@ const PagesInfoMain = () => {
                       <label htmlFor="categories">Categories</label>
                       <div className="input-area second">
                         {/* Select */}
-                        <Select data={categoriesSelect} />
+                        {/* <Select data={categoriesSelect} /> */}
                       </div>
                     </div>
                   </div>

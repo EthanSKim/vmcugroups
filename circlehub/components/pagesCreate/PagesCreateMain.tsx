@@ -55,7 +55,7 @@ const PagesCreateMain = () => {
                 </div>
                 <div className="input-area second">
                   {/* Select */}
-                  <Select data={categorySelect} />
+                  {/* <Select data={categorySelect} /> */}
                 </div>
                 <div className="input-area second">
                   <textarea

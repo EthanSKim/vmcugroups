@@ -106,7 +106,7 @@ const ProfilePostMain = () => {
         <MakePost />
 
         {/* Feeds */}
-        <NewsFeeds clss="p-3 p-sm-5" />
+        {/* <NewsFeeds clss="p-3 p-sm-5" /> */}
       </div>
       <div className="col-xxl-3 col-xl-4 col-lg-4 col-6 mt-5 mt-xl-0">
         <div className="cus-overflow cus-scrollbar sidebar-head">
