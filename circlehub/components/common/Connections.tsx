@@ -10,6 +10,7 @@ interface RequestProps {
   members: string[];
   type: string;
   count: Number;
+  locked: boolean;
 }
 
 const Connections = ({ clss = "col-xxl-8", groupDetails}: {clss:string, groupDetails:RequestProps}) => {
@@ -133,7 +134,7 @@ const Connections = ({ clss = "col-xxl-8", groupDetails}: {clss:string, groupDet
         >
           {
             admin ? 
-            <button onClick={createGroups} className="cmn-btn second">Create Random Groups</button> : 
+            groupDetails.locked ? <button onClick={createGroups} className="cmn-btn second">Create Random Groups</button> : <button className="cmn-btn third">!Lock Group to Create Random Groups!</button> : 
             <></>
           }
           {/* Followers Tab */}

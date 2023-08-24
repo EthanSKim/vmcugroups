@@ -14,7 +14,7 @@ interface RequestProps {
 }
 
 const GroupDetailsMain = ({curUser, groupId}:{curUser:RequestProps, groupId:Number}) => {
-  const initialState = {id:"", name:"", members:[], type:"", count:0};
+  const initialState = {id:"", name:"", members:[], type:"", count:0, locked:false};
   const [groupDetails, setGroupDetails] = useState(initialState);
 
   const getGroupDetails = async () => {

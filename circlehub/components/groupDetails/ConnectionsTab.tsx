@@ -7,6 +7,7 @@ interface RequestProps {
   members: string[];
   type: string;
   count: Number;
+  locked: boolean;
 }
 
 

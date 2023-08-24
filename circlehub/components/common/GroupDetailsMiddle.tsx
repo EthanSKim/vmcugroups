@@ -10,6 +10,7 @@ interface RequestProps {
   members: string[];
   type: string;
   count: Number;
+  locked: boolean;
 }
 
 const GroupDetailsMiddle = ({ children, groupDetails }: { children: JSX.Element, groupDetails:RequestProps }) => {
