@@ -50,9 +50,9 @@ const BioContent = () => {
   return (
     <div className="single-box p-3 p-sm-5">
       <div className="head-area text-start">
-        <h6>Today's Event</h6>
+        <h6>Event of Today</h6>
         <p className="mdtxt mt-6">
-          “Please enjoy our first Friday Gathering!”.
+          Please enjoy our first Friday Gathering of the semester!!
         </p>
       </div>
       {/* <ul className="d-grid gap-3 mt-4">
