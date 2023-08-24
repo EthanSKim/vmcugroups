@@ -8,7 +8,7 @@ const CheckoutMain = () => {
         <div className="row">
           <div className="col-xl-3 col-lg-4">
             {/* Home Left */}
-            <HomeLeft clss="d-lg-none" />
+            {/* <HomeLeft clss="d-lg-none" /> */}
           </div>
 
           <div className="col-xl-9 col-lg-8 contact-information">
