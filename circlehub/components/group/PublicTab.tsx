@@ -29,7 +29,7 @@ const PublicTab = ({tab, admin}:{tab:String, admin:boolean}) => {
 
   return (
     <div className="row cus-mar friend-request">
-      {groups.toReversed().map((itm) => (
+      {groups.reverse().map((itm) => (
         <div key={itm.id} className="col-xl-4 col-sm-6 col-8">
           {/* Group Card  */}
           <GroupCard data={itm} tab={"public"} admin={admin}/>
