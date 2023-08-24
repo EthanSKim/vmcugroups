@@ -36,10 +36,10 @@ const FriendRequestMain = ({curUser}:{curUser:RequestProps}) => {
     <main className="main-content">
       <div className="container">
         <div className="row">
-          <div className="col-xl-3 col-lg-4">
-            {/* Friend Left Menu */}
+          {/* <div className="col-xl-3 col-lg-4">
+            Friend Left Menu
             <FriendLeftMenu curUser={curUser} />
-          </div>
+          </div> */}
           <div className="col-xl-9 col-lg-8">
             <div className="row cus-mar friend-request">
               {members.map((itm) => (
