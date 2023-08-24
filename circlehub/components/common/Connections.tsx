@@ -19,7 +19,7 @@ const Connections = ({ clss = "col-xxl-8", groupDetails}: {clss:string, groupDet
   const [subgroups, setSubGroups] = useState(initialSubState);
   const getGroupMembers = async () => {
     try {
-      await axios.post("http://www.vmcugroupsapi.com/getMembersInfo", groupDetails.members).then((response) => {
+      await axios.post("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/getMembersInfo", groupDetails.members).then((response) => {
         setMembers(response.data);
       })
     } catch (err) {
@@ -68,7 +68,7 @@ const Connections = ({ clss = "col-xxl-8", groupDetails}: {clss:string, groupDet
 
   const sendSubGroups = async (tempGroups:any) => {
     try {
-      await axios.post("http://www.vmcugroupsapi.com/createSubGroups", {tempGroups, groupId:groupDetails.id}).then((response) => {
+      await axios.post("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/createSubGroups", {tempGroups, groupId:groupDetails.id}).then((response) => {
         console.log(response.data);
       })
     } catch (err) {

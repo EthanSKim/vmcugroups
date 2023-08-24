@@ -19,7 +19,7 @@ const FriendRequestMain = ({curUser}:{curUser:RequestProps}) => {
 
   const getAllMembers = async () => {
     try {
-      await axios.get("http://www.vmcugroupsapi.com/getAllMembers").then((response) => {
+      await axios.get("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/getAllMembers").then((response) => {
         if (response.statusText == "OK") {
           setMembers(response.data);
         }

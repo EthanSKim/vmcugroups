@@ -37,7 +37,7 @@ const Settings = ({ curUser }: { curUser: RequestProps }) => {
       alert("please select");
     } else {
       try {
-        await axios.post("http://www.vmcugroupsapi.com/changeInfo", userData).then((response) => {
+        await axios.post("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/changeInfo", userData).then((response) => {
           if (response.statusText == "OK") {
             localStorage.setItem(userKey, JSON.stringify(response.data));
             router.push("/");

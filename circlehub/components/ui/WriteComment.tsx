@@ -15,7 +15,7 @@ const WriteComment = () => {
   const handleSubmit = async (e:any) => {
     e.preventDefault();
     try {
-      await axios.post("http://www.vmcugroupsapi.com/adminAuthorize", {secretKeyword}).then((response) => {
+      await axios.post("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/adminAuthorize", {secretKeyword}).then((response) => {
         localStorage.setItem("@admin", JSON.stringify(response.data));
       })
     } catch(err) {
