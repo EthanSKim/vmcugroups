@@ -39,7 +39,7 @@ const Post = ({ post }: { post: PostProps }) => {
         </div> */}
       </div>
       <div className="py-4">
-        <p className="description">Welcome to Vision Mission Church Undergrads!!<br/>Sunday Service: 11:00 AM<br/>Friday Gathering: 7:00 PM<br/>Location:college station.</p>
+        <p className="description">Welcome to Vision Mission Church Undergrads!!<br/>Sunday Service: 11:00 AM<br/>Friday Gathering: 7:00 PM<br/>Location: 4254 Texas 6 Frontage Rd, College Station, Texas 77845</p>
         <p className="hastag d-flex gap-2">
           {hashTags?.map((itm) => (
             <Link key={itm} href="#">
