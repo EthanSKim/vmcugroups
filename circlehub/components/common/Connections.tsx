@@ -29,11 +29,13 @@ const Connections = ({ clss = "col-xxl-8", groupDetails}: {clss:string, groupDet
 
   const createGroups = () => {
     const number = prompt("How many groups do you want?", "0");
-    if (isNaN(number)) {
-      alert("Please enter a number!");
-    } else {
-      const groupCount = parseInt(number);
-      createRandomGroups(groupCount);
+    if (number) {
+      if (isNaN(Number(number))) {
+        alert("Please enter a number!");
+      } else {
+        const groupCount = parseInt(number);
+        createRandomGroups(groupCount);
+      }
     }
   };
 
