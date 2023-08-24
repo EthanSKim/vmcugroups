@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import CrudAction from "../ui/CrudAction";
 import PrivacyAction from "../ui/PrivacyAction";
