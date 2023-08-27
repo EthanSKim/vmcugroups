@@ -170,7 +170,7 @@ const PagesCreate2Main = () => {
             <div className="row">
               <div className="col-xxl-8 col-xl-7">
                 {/* Bio Content */}
-                <BioContent />
+                {/* <BioContent /> */}
               </div>
 
               <div className="col-xxl-4 col-xl-5 col-lg-10 mt-5 mt-xl-0">

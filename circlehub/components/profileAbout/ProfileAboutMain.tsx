@@ -6,7 +6,7 @@ const ProfileAboutMain = () => {
     <>
       <div className="col-xxl-9 col-xl-8 col-lg-7">
         {/* Bio Content */}
-        <BioContent />
+        {/* <BioContent /> */}
       </div>
 
       <div className="col-xxl-3 col-xl-4 col-lg-5">
