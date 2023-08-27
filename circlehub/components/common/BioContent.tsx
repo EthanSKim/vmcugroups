@@ -46,13 +46,23 @@ const bioData = [
   },
 ];
 
-const BioContent = () => {
+interface RequestProps {
+  id: string;
+  name: string;
+  members: string[];
+  type: string;
+  count: Number;
+  locked: boolean;
+  desc: string;
+}
+
+const BioContent = ({groupDetails}: {groupDetails:RequestProps}) => {
   return (
     <div className="single-box p-3 p-sm-5">
       <div className="head-area text-start">
         <h6>Event of Today</h6>
         <p className="mdtxt mt-6">
-          Please enjoy our first Friday Gathering of the semester!!
+          {groupDetails.desc}
         </p>
       </div>
       {/* <ul className="d-grid gap-3 mt-4">

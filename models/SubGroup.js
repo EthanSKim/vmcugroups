@@ -16,11 +16,6 @@ const SubGroupSchema = new mongoose.Schema({
             type: String,
         }
     ],
-    count: {
-        type: Number,
-        required: true,
-        max:50
-    }
 });
 
 module.exports = mongoose.model("SubGroup", SubGroupSchema);

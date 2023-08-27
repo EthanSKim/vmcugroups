@@ -35,12 +35,12 @@ const PageCreateProfile = () => {
             Invite
           </Link>
           {/* Contact Action */}
-          <ContactAction
+          {/* <ContactAction
             actionList={[
               ["Unfollow", "person_remove"],
               ["Hide", "hide_source"],
             ]}
-          />
+          /> */}
         </div>
       </div>
       <div className="friends-list d-flex flex-wrap gap-2 align-items-center text-center">

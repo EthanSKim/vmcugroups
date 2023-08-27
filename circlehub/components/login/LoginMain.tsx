@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 const userKey = "@userData"
+const APIURL = "https://vmcugroupapi-9b61193cdcaa.herokuapp.com";
+const LOCALURL = "http://localhost:8800";
 const LoginMain = () => {
     const initialState = {name:"", major:"", year:""};
     const [userData, setUserData] = useState(initialState);
@@ -25,7 +27,7 @@ const LoginMain = () => {
             alert("please select");
         } else {
             try {
-                await axios.post("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/login", userData).then((response) => {
+                await axios.post(`${APIURL}/login`, userData).then((response) => {
                  if (response.statusText == "OK") {
                     localStorage.setItem(userKey, JSON.stringify(response.data));
                     router.push("/");

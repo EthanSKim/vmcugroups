@@ -5,6 +5,9 @@ import { useEffect, useReducer, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
+const APIURL = "https://vmcugroupapi-9b61193cdcaa.herokuapp.com";
+const LOCALURL = "http://localhost:8800";
+
 interface RequestProps {
   id: string;
   name: string;
@@ -18,7 +21,7 @@ const MyGroupTab = ({curUser, tab, admin}: {curUser:RequestProps, tab:String, ad
   const [groups, setGroups] = useState(initialState);
   const getJoinedGroups = async () => {
     try {
-      await axios.post("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/getJoinedGroups", {id:curUser.id}).then((response) => {
+      await axios.post(`${APIURL}/getJoinedGroups`, {id:curUser.id}).then((response) => {
         if (response.statusText == "OK") {
           setGroups(response.data);
         }

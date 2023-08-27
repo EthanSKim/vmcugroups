@@ -7,6 +7,8 @@ interface RequestProps {
   members: string[];
   type: string;
   count: Number;
+  locked: boolean;
+  desc: string;
 }
 
 const AboutTab = ({groupDetails}:{groupDetails:RequestProps}) => {
@@ -14,7 +16,7 @@ const AboutTab = ({groupDetails}:{groupDetails:RequestProps}) => {
     <>
       <div className="col-xxl-8 col-xl-7">
         {/* Bio Content */}
-        <BioContent />
+        <BioContent groupDetails={groupDetails}/>
       </div>
       {/* <div className="col-xxl-4 col-xl-5 col-lg-10 mt-5 mt-xl-0">
         About

@@ -115,13 +115,23 @@ app.post("/createGroup", async (req, res) => {
             name: req.body.name,
             type: req.body.type,
             count: 0,
-            locked: false
+            locked: false,
+            desc: req.body.desc
         });
 
         // Save group and respond
         const group = await newGroup.save();
         res.status(200).json(group);
     } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+app.post("/deleteGroup", async (req, res) => {
+    try {
+        await Group.findOneAndDelete({id:req.body.groupId});
+        res.status(200);
+    } catch(err) {
         res.status(500).json(err);
     }
 });
@@ -234,7 +244,6 @@ app.post("/createSubGroups", async (req, res) => {
                 id: i,
                 groupId: groupId,
                 members: members,
-                count: 0
             });
     
             // Save group and respond
@@ -242,6 +251,15 @@ app.post("/createSubGroups", async (req, res) => {
         }
         res.status(200);
         
+    } catch(err) {
+        res.status(500).json(err);
+    }
+});
+
+app.post("/clearSubGroups", async (req, res) => {
+    try {
+        await SubGroup.deleteMany({"groupId": req.body.groupId});
+        res.status(200);
     } catch(err) {
         res.status(500).json(err);
     }

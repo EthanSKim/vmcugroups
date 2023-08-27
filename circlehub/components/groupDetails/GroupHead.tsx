@@ -4,6 +4,7 @@ import ContactAction from "../ui/ContactAction";
 import avatar_2 from "/public/images/avatar-2.png";
 import group_avatar_2 from "/public/images/group-avatar-2.png";
 import group_cover_img from "/public/images/group-cover-img.png";
+import { useEffect, useState } from "react";
 
 interface RequestProps {
   id: string;
@@ -14,6 +15,14 @@ interface RequestProps {
 }
 
 const GroupHead = ({groupDetails}: {groupDetails:RequestProps}) => {
+  const [admin, setAdmin] = useState(false);
+  useEffect(() => {
+    const adminStr =localStorage.getItem("@admin");
+    if (adminStr) {
+      const isAdmin = JSON.parse(adminStr).auth;
+      setAdmin(isAdmin);
+    }
+  }, []);
   return (
     <>
       <div className="avatar-area">
@@ -33,21 +42,25 @@ const GroupHead = ({groupDetails}: {groupDetails:RequestProps}) => {
             <p className="mdtxt">Current: {String(groupDetails.count)} members</p>
           </div>
         </div>
-        {/* <div className="btn-item d-center gap-3">
-          <Link href="#" className="cmn-btn fourth gap-1">
+        <div className="btn-item d-center gap-3">
+          {/* <Link href="#" className="cmn-btn fourth gap-1">
             Joined
           </Link>
           <Link href="#" className="cmn-btn third gap-1">
             Leave
-          </Link>
-          Contact Action
-          <ContactAction
-            actionList={[
-              ["Unfollow", "person_remove"],
-              ["Hide", "hide_source"],
-            ]}
-          />
-        </div> */}
+          </Link> */}
+          {/* Contact Action */}
+          {
+            admin ? 
+            <ContactAction
+              actionList={[
+                ["Delete Group", "hide_source"],
+                ["Clear small groups", "person_remove"],
+              ]}
+              groupId={groupDetails.id}
+            /> : <></>
+          }
+        </div>
       </div>
       {/* <div className="friends-list d-flex flex-wrap gap-2 align-items-center text-center">
         <ul className="d-flex align-items-center justify-content-center">

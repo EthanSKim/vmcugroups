@@ -5,6 +5,8 @@ import Link from "next/link";
 import add_post_avatar from "/public/images/add-post-avatar.png";
 import { useState } from "react";
 import axios from "axios";
+const APIURL = "https://vmcugroupapi-9b61193cdcaa.herokuapp.com";
+const LOCALURL = "http://localhost:8800";
 
 const WriteComment = () => {
   const [secretKeyword, setSecretKeyword] = useState("");
@@ -15,7 +17,7 @@ const WriteComment = () => {
   const handleSubmit = async (e:any) => {
     e.preventDefault();
     try {
-      await axios.post("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/adminAuthorize", {secretKeyword}).then((response) => {
+      await axios.post(`${APIURL}/adminAuthorize`, {secretKeyword}).then((response) => {
         localStorage.setItem("@admin", JSON.stringify(response.data));
       })
     } catch(err) {

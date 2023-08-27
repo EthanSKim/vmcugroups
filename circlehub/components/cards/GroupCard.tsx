@@ -6,6 +6,8 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 
 const userKey = "@userData"
+const APIURL = "https://vmcugroupapi-9b61193cdcaa.herokuapp.com";
+const LOCALURL = "http://localhost:8800";
 
 interface GroupProps {
   id: string;
@@ -26,7 +28,7 @@ const GroupCard = ({ data, tab, admin }: { data: GroupProps, tab:String, admin:b
       if (userDataStr) {
         router.push(`/groups/${id}`);
         const userId = JSON.parse(userDataStr).id;
-        await axios.post("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/joinGroup", {userId, id});
+        await axios.post(`${APIURL}/joinGroup`, {userId, id});
       }
     } catch (err:any) {
       if(err.response.status == 400) {
@@ -44,7 +46,7 @@ const GroupCard = ({ data, tab, admin }: { data: GroupProps, tab:String, admin:b
         const leave = confirm("Are you sure you want to leave?");
         if (leave) {
           const userId = JSON.parse(userDataStr).id;
-          await axios.post("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/leaveGroup", {userId, id});
+          await axios.post(`${APIURL}/leaveGroup`, {userId, id});
         }
       }
     } catch (err) {
@@ -54,7 +56,7 @@ const GroupCard = ({ data, tab, admin }: { data: GroupProps, tab:String, admin:b
 
   const handleLock = async () => {
     try {
-      await axios.post("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/lockGroup", {id});
+      await axios.post(`${APIURL}/lockGroup`, {id});
     } catch (err) {
       console.log(err);
     }
@@ -62,7 +64,7 @@ const GroupCard = ({ data, tab, admin }: { data: GroupProps, tab:String, admin:b
 
   const handleUnlock = async () => {
     try {
-      await axios.post("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/unlockGroup", {id});
+      await axios.post(`${APIURL}/unlockGroup`, {id});
     } catch(err) {
       console.log(err);
     }

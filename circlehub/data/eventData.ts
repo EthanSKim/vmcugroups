@@ -46,7 +46,7 @@ const eventData = [
   },
   {
     id: 6,
-    title: "U da chung",
+    title: "Worship Service",
     published: "29 Sep 2023",
     place: "VMC",
     img: event_img_6,
@@ -55,7 +55,7 @@ const eventData = [
     id: 7,
     title: "Retreat",
     published: "6 Oct 2023",
-    place: "???",
+    place: "TBD",
     img: event_img_7,
   },
   {

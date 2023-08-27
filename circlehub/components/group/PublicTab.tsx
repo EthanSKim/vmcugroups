@@ -4,13 +4,16 @@ import GroupCard from "../cards/GroupCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+const APIURL = "https://vmcugroupapi-9b61193cdcaa.herokuapp.com";
+const LOCALURL = "http://localhost:8800";
+
 const PublicTab = ({tab, admin}:{tab:String, admin:boolean}) => {
   const initialState = [{id:"", name:"", members:[], type:"", count:0, locked:false}];
   const [groups, setGroups] = useState(initialState);
 
   const getAllGroups = async () => {
     try {
-      await axios.get("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/getAllGroups").then((response) => {
+      await axios.get(`${APIURL}/getAllGroups`).then((response) => {
         if (response.statusText == "OK") {
           setGroups(response.data);
         }

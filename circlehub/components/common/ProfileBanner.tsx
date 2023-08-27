@@ -57,12 +57,12 @@ const ProfileBanner = ({ tabData }: { tabData: string[][] }) => {
             Message
           </Link>
           {/* Contact Action */}
-          <ContactAction
+          {/* <ContactAction
             actionList={[
               ["Block", "lock"],
               ["Report", "flag"],
             ]}
-          />
+          /> */}
         </div>
       </div>
       <div className="page-details">

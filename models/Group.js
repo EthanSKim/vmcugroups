@@ -31,6 +31,12 @@ const GroupSchema = new mongoose.Schema({
     locked: {
         type: Boolean,
         required: true,
+    },
+    desc: {
+        type: String,
+        required: true,
+        min: 3,
+        max: 50
     }
 });
 

@@ -8,10 +8,14 @@ import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
+const APIURL = "https://vmcugroupapi-9b61193cdcaa.herokuapp.com";
+const LOCALURL = "http://localhost:8800";
+
 const gatheringTypes = [
   { id: 1, name: "Choose Type" },
-  { id: 2, name: "Friday Gathering" },
-  { id: 3, name: "Lunch Buddies" },
+  { id: 2, name: "Sunday Service" },
+  { id: 3, name: "Friday Gathering" },
+  { id: 4, name: "Lunch Buddies" },
 ];
 
 
@@ -19,6 +23,7 @@ const gatheringTypes = [
 const GroupCreateForm = () => {
   const [name, setName] = useState("");
   const [type, setType] = useState("");
+  const [desc, setDesc] = useState("");
   const router = useRouter();
 
   const handleChangeName = (e:any) => {
@@ -29,13 +34,17 @@ const GroupCreateForm = () => {
     setType(value);
   }
 
+  const handleChangeDesc = (e:any) => {
+    setDesc(e.target.value);
+  }
+
   const handleSubmit = async (e:any) => {
     e.preventDefault();
     if (type == "Choose Type") {
       alert("please select");
     } else {
       try {
-        await axios.post("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/createGroup", {name, type}).then(
+        await axios.post(`${APIURL}/createGroup`, {name, type, desc}).then(
           (response) => {
             if (response.statusText == "OK") {
               console.log(response.data);
@@ -66,7 +75,7 @@ const GroupCreateForm = () => {
         </div>
         <div className="text-area">
           <h6 className="m-0 mb-1">
-            <Link href="/profile/post">Lerio Mao</Link>
+            <Link href="/profile/post">VMC ADMIN</Link>
           </h6>
           <p className="mdtxt">Admin</p>
         </div>
@@ -79,9 +88,9 @@ const GroupCreateForm = () => {
           {/* Select */}
           <Select data={gatheringTypes} handleTypeChange={handleChangeType}/>
         </div>
-        {/* <div className="input-area second">
-          <input type="text" placeholder="Invite Friends" required />
-        </div> */}
+        <div className="input-area second">
+          <input type="text" placeholder="Event Description" name="desc" required onChange={handleChangeDesc} value={desc}/>
+        </div>
         <div className="btn-area">
           <button type="submit" className="cmn-btn">
             Create Group

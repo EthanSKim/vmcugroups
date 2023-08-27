@@ -5,6 +5,9 @@ import FriendLeftMenu from "../menu/FriendLeftMenu";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+const APIURL = "https://vmcugroupapi-9b61193cdcaa.herokuapp.com";
+const LOCALURL = "http://localhost:8800";
+
 interface RequestProps {
   id: string;
   name: string;
@@ -19,7 +22,7 @@ const FriendRequestMain = ({curUser}:{curUser:RequestProps}) => {
 
   const getAllMembers = async () => {
     try {
-      await axios.get("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/getAllMembers").then((response) => {
+      await axios.get(`${APIURL}/getAllMembers`).then((response) => {
         if (response.statusText == "OK") {
           setMembers(response.data);
         }

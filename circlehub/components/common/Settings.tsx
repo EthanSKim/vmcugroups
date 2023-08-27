@@ -10,6 +10,9 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { userAgent } from "next/server";
 
+const APIURL = "https://vmcugroupapi-9b61193cdcaa.herokuapp.com";
+const LOCALURL = "http://localhost:8800";
+
 interface RequestProps {
   id: string;
   name: string;
@@ -37,7 +40,7 @@ const Settings = ({ curUser }: { curUser: RequestProps }) => {
       alert("please select");
     } else {
       try {
-        await axios.post("https://vmcugroupapi-9b61193cdcaa.herokuapp.com/changeInfo", userData).then((response) => {
+        await axios.post(`${APIURL}/changeInfo`, userData).then((response) => {
           if (response.statusText == "OK") {
             localStorage.setItem(userKey, JSON.stringify(response.data));
             router.push("/");
