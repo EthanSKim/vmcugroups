@@ -33,7 +33,7 @@ mongoose.connect(URI, {
 })
 
 app.post("/adminAuthorize", (req, res) => {
-    if (req.body.secretKeyword === "admin:ourmission1004") {
+    if (req.body.secretKeyword === process.env.SECRET_KEYWORD) {
         res.status(200).json({auth:true});
     } else if (req.body.secretKeyword === "admin:quit") {
         res.status(200).json({auth:false});
